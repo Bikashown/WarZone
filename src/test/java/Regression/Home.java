@@ -15,7 +15,7 @@ public class Home extends Base{
 	public void verify_the_message() throws IOException
 	{
 		Funtions.login();
-		Assert.assertEquals("My Account1", Homepage.message().getText());
+		Assert.assertEquals("My Account", Homepage.message().getText());
 		//driver.switchTo().frame(0);
 	
 	}
