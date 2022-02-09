@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-02-09T21:19:04Z" name="Suite" finished-at="2022-02-09T21:19:24Z" duration-ms="20352">
+  <suite started-at="2022-02-09T21:24:00Z" name="Default suite" finished-at="2022-02-09T21:24:20Z" duration-ms="20165">
     <groups>
     </groups>
-    <test started-at="2022-02-09T21:19:04Z" name="Test" finished-at="2022-02-09T21:19:24Z" duration-ms="20352">
+    <test started-at="2022-02-09T21:24:00Z" name="Default test" finished-at="2022-02-09T21:24:20Z" duration-ms="20165">
       <class name="Regression.Home">
-        <test-method signature="verify_the_message()[pri:0, instance:Regression.Home@7f0d96f2]" started-at="2022-02-09T21:19:04Z" name="verify_the_message" finished-at="2022-02-09T21:19:22Z" duration-ms="17647" status="PASS">
+        <test-method signature="Verify_the_message()[pri:0, instance:Regression.Home@8458f04]" started-at="2022-02-09T21:24:00Z" name="Verify_the_message" finished-at="2022-02-09T21:24:18Z" duration-ms="17677" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_the_message -->
-        <test-method is-config="true" signature="closebrowser()[pri:0, instance:Regression.Home@7f0d96f2]" started-at="2022-02-09T21:19:22Z" name="closebrowser" finished-at="2022-02-09T21:19:24Z" duration-ms="2597" status="PASS">
+        </test-method> <!-- Verify_the_message -->
+        <test-method is-config="true" signature="closebrowser()[pri:0, instance:Regression.Home@8458f04]" started-at="2022-02-09T21:24:18Z" name="closebrowser" finished-at="2022-02-09T21:24:20Z" duration-ms="2394" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closebrowser -->
       </class> <!-- Regression.Home -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
