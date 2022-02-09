@@ -7,22 +7,30 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
 import Utility.Base;
+import Utility.Report;
 
 public class Listeners extends Base implements ITestListener{
-
+	ExtentTest test;
+	ExtentReports report=Report.createreport();
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
+		 test=report.createTest(result.getMethod().getMethodName());
 		
 	}
 
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
-		
+		test.log(Status.PASS,"Test Passed");
 	}
 
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
+		test.fail(result.getThrowable());
 		WebDriver driver=null;
 		String testcasename=result.getMethod().getMethodName();
 		try {
@@ -66,6 +74,7 @@ public class Listeners extends Base implements ITestListener{
 
 	public void onFinish(ITestContext context) {
 		// TODO Auto-generated method stub
+		report.flush();
 		
 	}
 

@@ -12,7 +12,7 @@ import Utility.Base;
 
 public class Home extends Base{
 	@Test
-	public void verify_the_message() throws IOException
+	public void Verify_the_message() throws IOException
 	{
 		Funtions.login();
 		Assert.assertEquals("My Account", Homepage.message().getText());
