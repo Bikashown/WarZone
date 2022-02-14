@@ -8,7 +8,7 @@
     <classes>
       <class name="Regression.Home">
         <methods>
-          <include name="verify_the_message"/>
+          <include name="Verify_the_message"/>
           <include name="closebrowser"/>
         </methods>
       </class> <!-- Regression.Home -->

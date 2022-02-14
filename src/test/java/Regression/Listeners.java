@@ -11,10 +11,10 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import Utility.Base;
+import Utility.Basenew;
 import Utility.Report;
 
-public class Listeners extends Base implements ITestListener{
+public class Listeners extends Basenew implements ITestListener{
 	ExtentTest test;
 	ExtentReports report=Report.createreport();
 	public void onTestStart(ITestResult result) {

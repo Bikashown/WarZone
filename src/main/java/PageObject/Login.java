@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import Utility.Base;
+import Utility.Basenew;
 
-public class Login extends Base{
+public class Login extends Basenew{
 	
 	private static By emailaddress=By.id("input-email");
 	private static By password=By.id("input-password");
