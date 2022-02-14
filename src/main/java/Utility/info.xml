@@ -1,0 +1,20 @@
+<project id="Test">
+
+<environment env="Test">
+<url>https://demo.opencart.com/index.php?route=account/login</url>
+<uiusername>xyz</uiusername>
+<uipassword>abc</uipassword>
+<dbusername>zzz</dbusername>
+<dbpassword>ggg</dbpassword>>
+</environment>
+
+<environment env="Stage">
+<url>https://www.google.com/</url>
+<uiusername>xyz</uiusername>
+<uipassword>abc</uipassword>
+<dbusername>zzz</dbusername>
+<dbpassword>ggg</dbpassword>>
+</environment>
+
+
+</project>
