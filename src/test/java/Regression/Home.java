@@ -16,18 +16,18 @@ import Utility.Basenew;
 
 public class Home extends Basenew{
 	@Test
-	public void Verify_the_message() throws IOException, ParserConfigurationException, SAXException
+	public void Verify_the_message() throws IOException, ParserConfigurationException, SAXException, InterruptedException
 	{
 		Funtions.login();
 		Assert.assertEquals("My Account", Homepage.message().getText());
-		//driver.switchTo().frame(0);
-	
+		//Thread.sleep(3000);
+		Funtions.fnmovethemouseon(Homepage.desktop());
 	}
 	
 	@AfterTest
 	public void closebrowser()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }

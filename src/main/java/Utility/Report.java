@@ -1,10 +1,12 @@
 package Utility;
 
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.ExtentSparkReporterConfig;
 
 public class Report {
+	
 	static ExtentReports report;
 	public static ExtentReports createreport()
 	{
@@ -17,5 +19,7 @@ public class Report {
 		report.attachReporter(reporter);
 		return report;
 	}
+	
+	
 
 }

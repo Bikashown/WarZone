@@ -15,17 +15,22 @@ import Utility.Basenew;
 import Utility.Report;
 
 public class Listeners extends Basenew implements ITestListener{
-	ExtentTest test;
-	ExtentReports report=Report.createreport();
+	 ExtentTest test;
+	ExtentReports report1=Report.createreport();
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
-		 test=report.createTest(result.getMethod().getMethodName());
+		 test=report1.createTest(result.getMethod().getMethodName());
+		 
 		
 	}
-
+	
+	
+	
+	
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
 		test.log(Status.PASS,"Test Passed");
+	
 	}
 
 	public void onTestFailure(ITestResult result) {
@@ -74,7 +79,7 @@ public class Listeners extends Basenew implements ITestListener{
 
 	public void onFinish(ITestContext context) {
 		// TODO Auto-generated method stub
-		report.flush();
+		report1.flush();
 		
 	}
 

@@ -4,9 +4,13 @@
 <listeners>
 <listener class-name="Regression.Listeners"/>
 </listeners>
+<parameter name="Browsername" value="chrome"/>
   <test thread-count="5" name="Test">
     <classes>
       <class name="Regression.Home"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
+
+
+

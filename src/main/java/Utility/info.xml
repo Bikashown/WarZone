@@ -2,8 +2,8 @@
 
 <environment env="Test">
 <url>https://demo.opencart.com/index.php?route=account/login</url>
-<uiusername>xyz</uiusername>
-<uipassword>abc</uipassword>
+<uiusername>78bikash.hyd@gmail.com</uiusername>
+<uipassword>india1988</uipassword>
 <dbusername>zzz</dbusername>
 <dbpassword>ggg</dbpassword>>
 </environment>
