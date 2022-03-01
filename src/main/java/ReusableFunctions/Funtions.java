@@ -112,28 +112,57 @@ public class Funtions extends Basenew{
         	
         	  Actions a=new Actions(driver);
         	  a.moveToElement(element).click().build().perform();
-        	  
-        	  String[] itemstoverifywithDesktops= {"PC (0)","Ma","Show All Desktops"};
-        	  List items=Arrays.asList(itemstoverifywithDesktops);
-        	  Thread.sleep(10000);
-        	  WebElement popup=driver.findElement(By.cssSelector(".dropdown.open>div"));
-        	  Thread.sleep(4000);
-        	  int count=popup.findElements(By.tagName("a")).size();
-        	  
-        	  for(int i=0;i<count;i++)
+        	  if(element.getText().equalsIgnoreCase("Desktops"))
         	  {
-        		String itemName= popup.findElements(By.tagName("a")).get(i).getText();
-        		if(items.contains(itemName))
-        		{
-        			Assert.assertTrue(true);
-        			
-        		}
-        		else
-        		{
-        			Assert.assertTrue(false);
-        		}
+        		  String[] itemstoverifywithDesktops= {"PC (0)","Mac (0)","Show All Desktops"};
+            	  List items=Arrays.asList(itemstoverifywithDesktops);
+            	  Thread.sleep(10000);
+            	  WebElement popup=driver.findElement(By.cssSelector(".dropdown.open>div"));
+            	  Thread.sleep(4000);
+            	  int count=popup.findElements(By.tagName("a")).size();
+            	  
+            	  for(int i=0;i<count;i++)
+            	  {
+            		String itemName= popup.findElements(By.tagName("a")).get(i).getText();
+            		if(items.contains(itemName))
+            		{
+            			Assert.assertTrue(true);
+            			
+            		}
+            		else
+            		{
+            			Assert.assertTrue(false);
+            		}
+            	  }
+            	  
         	  }
         	  
+        	  else if(element.getText().equalsIgnoreCase("Laptops & Notebooks"))
+        	  {
+        		  String[] itemstoverifywithDesktops= {"Macs (0)","Windows (0)","Show All Laptops & Notebooks"};
+            	  List items=Arrays.asList(itemstoverifywithDesktops);
+            	  Thread.sleep(10000);
+            	  WebElement popup=driver.findElement(By.cssSelector(".dropdown.open>div"));
+            	  Thread.sleep(4000);
+            	  int count=popup.findElements(By.tagName("a")).size();
+            	  
+            	  for(int i=0;i<count;i++)
+            	  {
+            		String itemName= popup.findElements(By.tagName("a")).get(i).getText();
+            		if(items.contains(itemName))
+            		{
+            			Assert.assertTrue(true);
+            			
+            		}
+            		else
+            		{
+            			Assert.assertTrue(false);
+            		}
+            	  }
+            	  
+        	  }
+        	
+        	
           }	
           catch(Exception e)
           {

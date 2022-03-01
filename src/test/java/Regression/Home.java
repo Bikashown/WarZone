@@ -5,7 +5,9 @@ import java.io.IOException;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.xml.sax.SAXException;
 
@@ -15,19 +17,40 @@ import ReusableFunctions.Funtions;
 import Utility.Basenew;
 
 public class Home extends Basenew{
-	@Test
-	public void Verify_the_message() throws IOException, ParserConfigurationException, SAXException, InterruptedException
+	@BeforeMethod
+	public void settings() throws IOException, ParserConfigurationException, SAXException
 	{
 		Funtions.login();
+	}
+	@Test
+	public void Home_TC01_Verify_the_message() throws IOException, ParserConfigurationException, SAXException, InterruptedException
+	{
+		
 		Assert.assertEquals("My Account", Homepage.message().getText());
-		//Thread.sleep(3000);
+		
+	}
+	
+	@Test
+	public void Home_TC02_Verify_desktop_option() throws IOException, ParserConfigurationException, SAXException
+	{
+		
 		Funtions.fnmovethemouseon(Homepage.desktop());
 	}
 	
-	@AfterTest
+	@Test
+	public void Home_TC03_Verify_Laptops_and_Notebooks_option() throws IOException, ParserConfigurationException, SAXException
+	{
+
+		Funtions.fnmovethemouseon(Homepage.Laptops_and_Notebooks());
+	}
+	
+	
+	
+	@AfterMethod
 	public void closebrowser()
 	{
 		driver.quit();
 	}
+
 
 }

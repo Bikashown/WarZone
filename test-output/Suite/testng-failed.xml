@@ -5,14 +5,15 @@
   <listeners>
     <listener class-name="Regression.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="Home(failed)">
     <classes>
-      <class name="Regression.Home">
+      <class name="Regression.Tablets">
         <methods>
+          <include name="Tablets_TC01_Verify_the_message_on_tablet_page"/>
+          <include name="settings"/>
           <include name="closebrowser"/>
-          <include name="Verify_the_message"/>
         </methods>
-      </class> <!-- Regression.Home -->
+      </class> <!-- Regression.Tablets -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Home(failed) -->
 </suite> <!-- Failed suite [Suite] -->

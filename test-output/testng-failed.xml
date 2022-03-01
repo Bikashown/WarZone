@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Regression.Home">
+      <class name="Regression.Tablets">
         <methods>
+          <include name="Tablets_TC01_Verify_the_message_on_tablet_page"/>
+          <include name="settings"/>
           <include name="closebrowser"/>
-          <include name="Verify_the_message"/>
         </methods>
-      </class> <!-- Regression.Home -->
+      </class> <!-- Regression.Tablets -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
