@@ -2,24 +2,48 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-02-25T12:37:55 IST" name="Failed suite [Suite]" finished-at="2022-02-25T12:38:25 IST" duration-ms="29792">
+  <suite started-at="2022-03-01T00:13:08 IST" name="Default suite" finished-at="2022-03-01T00:13:19 IST" duration-ms="11402">
     <groups>
     </groups>
-    <test started-at="2022-02-25T12:37:55 IST" name="Test(failed)" finished-at="2022-02-25T12:38:25 IST" duration-ms="29792">
+    <test started-at="2022-03-01T00:13:08 IST" name="Default test" finished-at="2022-03-01T00:13:19 IST" duration-ms="11402">
       <class name="Regression.Home">
-        <test-method signature="Verify_the_message()[pri:0, instance:Regression.Home@54422e18]" started-at="2022-02-25T12:37:55 IST" name="Verify_the_message" finished-at="2022-02-25T12:38:24 IST" duration-ms="28538" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="Verify_the_message()[pri:0, instance:Regression.Home@7e0b85f9]" started-at="2022-03-01T00:13:08 IST" name="Verify_the_message" finished-at="2022-03-01T00:13:19 IST" duration-ms="10574" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=98.0.1108.62)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-UBASVQK', ip: '192.168.29.151', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 98.0.1108.62, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:55822}, msedge: {msedgedriverVersion: 98.0.1108.56 (9a336a18eae89..., userDataDir: C:\Users\DELL\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 455628401e587b7dfe32a5b6edd4ff72]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertTrue(Assert.java:45)
-at org.testng.Assert.assertTrue(Assert.java:55)
-at ReusableFunctions.Funtions.fnmovethemouseon(Funtions.java:133)
-at Regression.Home.Verify_the_message(Home.java:24)
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=98.0.1108.62)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-UBASVQK', ip: '192.168.29.151', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 98.0.1108.62, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:55822}, msedge: {msedgedriverVersion: 98.0.1108.56 (9a336a18eae89..., userDataDir: C:\Users\DELL\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 455628401e587b7dfe32a5b6edd4ff72
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:837)
+at Utility.Basenew.openapplication(Basenew.java:46)
+at ReusableFunctions.Funtions.login(Funtions.java:39)
+at Regression.Home.Verify_the_message(Home.java:21)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -50,15 +74,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_the_message -->
-        <test-method is-config="true" signature="closebrowser()[pri:0, instance:Regression.Home@54422e18]" started-at="2022-02-25T12:38:24 IST" name="closebrowser" finished-at="2022-02-25T12:38:25 IST" duration-ms="708" status="PASS">
+        <test-method is-config="true" signature="closebrowser()[pri:0, instance:Regression.Home@7e0b85f9]" started-at="2022-03-01T00:13:19 IST" name="closebrowser" finished-at="2022-03-01T00:13:19 IST" duration-ms="567" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closebrowser -->
       </class> <!-- Regression.Home -->
-    </test> <!-- Test(failed) -->
-  </suite> <!-- Failed suite [Suite] -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -30,7 +30,7 @@ public class Basenew {
    public static WebDriver driver;
    
    
-@Parameters({"Browsername"})
+
    public static WebDriver openapplication() throws ParserConfigurationException, SAXException, IOException
 	{
 	       
