@@ -7,13 +7,14 @@
   </listeners>
   <test thread-count="5" name="Home(failed)">
     <classes>
-      <class name="Regression.Tablets">
+      <class name="Regression.Home">
         <methods>
-          <include name="Tablets_TC01_Verify_the_message_on_tablet_page"/>
-          <include name="settings"/>
           <include name="closebrowser"/>
+          <include name="Home_TC02_Verify_desktop_option"/>
+          <include name="Home_TC03_Verify_Laptops_and_Notebooks_option"/>
+          <include name="settings"/>
         </methods>
-      </class> <!-- Regression.Tablets -->
+      </class> <!-- Regression.Home -->
     </classes>
   </test> <!-- Home(failed) -->
 </suite> <!-- Failed suite [Suite] -->
