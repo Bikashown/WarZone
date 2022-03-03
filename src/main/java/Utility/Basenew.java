@@ -12,6 +12,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Parameters;
@@ -33,18 +34,26 @@ public class Basenew {
 
    public static WebDriver openapplication() throws ParserConfigurationException, SAXException, IOException
 	{
-	       
+	       String browserName=System.getProperty("browser");
+	       if(browserName.equalsIgnoreCase("edge")) {
 	        	System.setProperty("webdriver.edge.driver",System.getProperty("user.dir")+"\\Drivers\\msedgedriver.exe");
 		    	driver= new EdgeDriver();
-		    	  driver.get(Funtions.fngetenvironmentaldata("url"));
-	        
-			
-			
-		  		
-		  		
-		  		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
-		  		driver.manage().window().maximize();
-		  		return driver;
+		    	driver.get(Funtions.fngetenvironmentaldata("url"));  		
+	       }
+	       else if(browserName.equalsIgnoreCase("chrome")) {
+	        	System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");
+		    	driver= new ChromeDriver();
+		    	driver.get(Funtions.fngetenvironmentaldata("url"));  		
+	       }
+	       else
+	       {
+	    	   System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"\\Drivers\\geckoedriver.exe");
+		    	driver= new FirefoxDriver();
+		    	driver.get(Funtions.fngetenvironmentaldata("url")); 
+	       }
+	       driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+	  	driver.manage().window().maximize();
+	       return driver;
 			}
    
    public void screenshot(String testcasename,WebDriver driver) throws IOException
