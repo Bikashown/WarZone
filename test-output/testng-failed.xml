@@ -11,10 +11,18 @@
         <methods>
           <include name="closebrowser"/>
           <include name="Home_TC02_Verify_desktop_option"/>
+          <include name="Home_TC01_Verify_the_message"/>
           <include name="Home_TC03_Verify_Laptops_and_Notebooks_option"/>
           <include name="settings"/>
         </methods>
       </class> <!-- Regression.Home -->
+      <class name="Regression.Tablets">
+        <methods>
+          <include name="Tablets_TC01_Verify_the_message_on_tablet_page"/>
+          <include name="settings"/>
+          <include name="closebrowser"/>
+        </methods>
+      </class> <!-- Regression.Tablets -->
     </classes>
   </test> <!-- Home(failed) -->
 </suite> <!-- Failed suite [Suite] -->
