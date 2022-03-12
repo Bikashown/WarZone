@@ -34,7 +34,13 @@ public class Basenew {
 
    public static WebDriver openapplication() throws ParserConfigurationException, SAXException, IOException
 	{
-	       String browserName=System.getProperty("browser");
+	   
+	   //This is my new code
+	  /* System.setProperty("webdriver.edge.driver",System.getProperty("user.dir")+"\\Drivers\\msedgedriver.exe");
+   	driver= new EdgeDriver();
+   	driver.get(Funtions.fngetenvironmentaldata("url"));  
+    return driver;*/
+	      String browserName=System.getProperty("browser");
 	       if(browserName.equalsIgnoreCase("edge")) {
 	        	System.setProperty("webdriver.edge.driver",System.getProperty("user.dir")+"\\Drivers\\msedgedriver.exe");
 		    	driver= new EdgeDriver();
