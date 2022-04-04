@@ -41,6 +41,7 @@ public class Basenew {
    	driver.get(Funtions.fngetenvironmentaldata("url"));  
     return driver;*/
 	      String browserName=System.getProperty("browser");
+	     // String browserName="chrome";
 	       if(browserName.equalsIgnoreCase("edge")) {
 	        	System.setProperty("webdriver.edge.driver",System.getProperty("user.dir")+"\\Drivers\\msedgedriver.exe");
 		    	driver= new EdgeDriver();
