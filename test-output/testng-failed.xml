@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <parameter name="Browsername" value="chrome"/>
-  <listeners>
-    <listener class-name="Regression.Listeners"/>
-  </listeners>
-  <test thread-count="5" name="Home(failed)">
+<suite parallel="classes" name="Failed suite [Suitenew]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="classes" name="Test(failed)">
     <classes>
+      <class name="Regression.Tablets">
+        <methods>
+          <include name="Tablets_TC01_Verify_the_message_on_tablet_page"/>
+          <include name="settings"/>
+          <include name="closebrowser"/>
+        </methods>
+      </class> <!-- Regression.Tablets -->
       <class name="Regression.Home">
         <methods>
           <include name="closebrowser"/>
@@ -16,13 +19,6 @@
           <include name="settings"/>
         </methods>
       </class> <!-- Regression.Home -->
-      <class name="Regression.Tablets">
-        <methods>
-          <include name="Tablets_TC01_Verify_the_message_on_tablet_page"/>
-          <include name="settings"/>
-          <include name="closebrowser"/>
-        </methods>
-      </class> <!-- Regression.Tablets -->
     </classes>
-  </test> <!-- Home(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suitenew] -->

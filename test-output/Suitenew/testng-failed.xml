@@ -13,7 +13,9 @@
       <class name="Regression.Home">
         <methods>
           <include name="closebrowser"/>
+          <include name="Home_TC02_Verify_desktop_option"/>
           <include name="Home_TC01_Verify_the_message"/>
+          <include name="Home_TC03_Verify_Laptops_and_Notebooks_option"/>
           <include name="settings"/>
         </methods>
       </class> <!-- Regression.Home -->
